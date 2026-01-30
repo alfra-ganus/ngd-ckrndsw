@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="tr-TR">
+
+<head>
+
+    <meta name="robots" content="noindex">
+    <meta name="descrition" content="Nehir's Birthday">
+    <meta name="author" content="Elif Naz Uckardes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <link id="favicon" rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎂</text></svg>">
+
+    <style>
+        body{background-color: #f7e7ea;background-image: none;}
+        #sayfa{
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <div id="sayfa">
+
+    <audio id="arkaPlanMuzigi" loop style="display: none;">
+    <source src="media/Happy Birthday (Piano Version).mp3" type="audio/mp3">
+    </audio>
+
+        <video 
+        src="media/ufle.mp4" 
+        id="pasta"
+        data-state="ilk"
+        autoplay 
+        muted 
+        playsinline 
+        style="width:85%; margin-left: 7%; pointer-events: auto; border-style: none;" 
+        oncanplay="this.playbackRate = 0.4;"
+        onended="ufle()" >
+        </video>
+
+        <div id="mum"></div>
+
+    </div>
+
+</body>
+
+<script src="script.js"></script>
+<script>window.addEventListener('load', function() {
+    var audio = document.getElementById("arkaPlanMuzigi");
+    
+    // Ses seviyesini ayarla (0.0 ile 1.0 arası. 0.3 = %30 ses)
+    audio.volume = 0.3; 
+
+    // 1. Tarayıcıdan çalmayı talep et
+    var playPromise = audio.play();
+
+    if (playPromise !== undefined) {
+        playPromise.then(_ => {
+            // Başarılı! Otomatik başladı.
+            console.log("Müzik otomatik başladı.");
+        })
+        .catch(error => {
+            // Başarısız! (Tarayıcı engelledi)
+            console.log("Otomatik oynatma engellendi. Tıklama bekleniyor...");
+            
+            // Kullanıcının sayfada herhangi bir yere tıklamasını bekle
+            document.body.addEventListener('click', function() {
+                audio.play();
+            }, { once: true }); // 'once: true' sayesinde sadece ilk tıklamada çalışır
+        });
+    }
+});</script>
+
+</html>

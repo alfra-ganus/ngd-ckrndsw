@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="tr-TR">
+
+<head>
+
+    <meta name="robots" content="noindex">
+    <meta name="descrition" content="Nehir's Birthday">
+    <meta name="author" content="Elif Naz Uckardes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tickets</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <link id="favicon" rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎟️</text></svg>">
+
+    <style>
+        body{background-color: #ffebeb;overflow:hidden;}
+        #sayfa{
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .row{
+        margin-top: 5%;
+        margin-left: 1%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center ;
+        gap: 12%;
+        }
+
+        .row img{
+            width: 20%;
+        }
+
+        #baslik{
+            margin-top: 0.3%;
+            margin-left: 20%;
+            z-index: 0;
+        }
+        
+        #buton2{
+            z-index: 1;
+            margin-top: -15%;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <div id="sayfa">
+        
+        <div id="baslik"><img src="media/media-foryou/tickets/tick.png" alt="Happy Birthday"></div>
+        <div id="buton2"><a href="menu.html"><img style="width: 15%;" src="media/media-foryou/tickets/snoopy(1).png" alt="geri"></a></a></div>
+
+
+        <div class="row">
+            <img class="ticket" id="1" src="media/media-foryou/tickets/1.png" alt="1">
+            <img class="ticket" id="2"src="media/media-foryou/tickets/2.png" alt="2">
+            <img class="ticket" id="3"src="media/media-foryou/tickets/1.png" alt="3">
+        </div>
+
+
+        <div class="row">
+            <img class="ticket" id="4"src="media/media-foryou/tickets/2.png" alt="4">
+            <img class="ticket" id="5"src="media/media-foryou/tickets/1.png" alt="5">
+            <img class="ticket" id="6"src="media/media-foryou/tickets/2.png" alt="6">
+        </div>
+
+        
+    </div>
+
+</body>
+
+<script>
+
+    document.getElementById('1').onclick = () => {
+        document.getElementById('1').onclick=null;
+        alert("Tebrikler!\nKeloğlan İzleme Maratonu Kazandınız!\nYEHUUUUU");
+        document.getElementById('1').style.opacity=0;
+        document.getElementById('1').style.cursor=none;
+        document.getElementById('1').style.pointerEvents=none;
+    };
+
+    document.getElementById('2').onclick = () => {
+        document.getElementById('2').onclick=null;
+        alert("Tebrikler!\nBir Kapak Hakkı Kazandınız!\nhadi bir kerelik kabul ettim iyi kullan");
+        document.getElementById('2').style.opacity=0;
+        document.getElementById('2').style.cursor=none;
+        document.getElementById('2').style.pointerEvents=none;
+    };
+
+    document.getElementById('3').onclick = () => {
+        document.getElementById('3').onclick=null;
+        alert("Tebrikler!\nStudy Date Kazandınız!\nWuhuuu!");
+        document.getElementById('3').style.opacity=0;
+        document.getElementById('3').style.cursor=none;
+        document.getElementById('3').style.pointerEvents=none;
+    };
+
+    document.getElementById('4').onclick = () => {
+        document.getElementById('4').onclick=null;
+        alert("Tebrikler!\nDoctor Who'dan Bir Bölüm İzletme Hakkı Kazandınız!\nneyse angel bölümleri güzel en azından");
+        document.getElementById('4').style.opacity=0;
+        document.getElementById('4').style.cursor=none;
+        document.getElementById('4').style.pointerEvents=none;
+    };
+
+    document.getElementById('5').onclick = () => {
+        document.getElementById('5').onclick=null;
+        alert("Tebrikler!\nKahve Date Kazandınız!\nÖn koşul: tatlı+dedikodu");
+        document.getElementById('5').style.opacity=0;
+        document.getElementById('5').style.cursor=none;
+        document.getElementById('5').style.pointerEvents=none;
+    };
+
+    document.getElementById('6').onclick = () => {
+        document.getElementById('6').onclick=null;
+        alert("Tebrikler!\nSupernatural'dan Bir Bölüm İzlemek Zorundasınız!\nYeyyyyy!");
+        document.getElementById('6').style.opacity=0;
+        document.getElementById('6').style.cursor=none;
+        document.getElementById('6').style.pointerEvents=none;
+    };
+
+
+
+</script>
+
+</html>
